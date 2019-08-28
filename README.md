@@ -1,2 +1,2 @@
-# LedgendsPromotions
+# LegendsPromotions
 Karaoke song database.
