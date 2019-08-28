@@ -31,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sahibjotsaggu/create-react-app-mern.git"
+    "url": "https://github.com/cwood89/LegendsPromotions"
   },
-  "author": "Sahibjot Saggu",
+  "author": "Chris Wood",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sahibjotsaggu/create-react-app-mern/issues"
+    "url": "https://github.com/cwood89/LegendsPromotions/issues"
   },
-  "homepage": "https://github.com/sahibjotsaggu/create-react-app-mern"
+  "homepage": "https://github.com/cwood89/LegendsPromotions"
 }

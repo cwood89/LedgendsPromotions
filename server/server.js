@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000;
 
 app.use(helmet());
 
-const mongoURL = mongoose.connect('mongodb://localhost/CRAMERN');
+const mongoURL = mongoose.connect('mongodb://localhost/legendsdb');
 
 const apiRoutes = require('./routes')(app, express);
 
