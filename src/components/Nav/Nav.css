@@ -1,0 +1,25 @@
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  overflow: hidden; }
+
+nav li {
+  display: block;
+  transition: 0.3s;
+  padding: 5px; }
+
+nav a {
+  color: white;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  width: 50px; }
+
+nav li:hover {
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.3); }

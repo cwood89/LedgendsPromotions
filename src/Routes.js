@@ -1,17 +1,19 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Layout from './Layout';
-
-// Route Containers
-import HomePage from './containers/HomePage/HomePage';
+import Header from './components/Header/Header';
+import Landing from './components/Landing/Landing';
+import Todo from './components/Todo/Todo';
+import Nav from './components/Nav/Nav';
 
 const Routes = () => (
-  <BrowserRouter basename="/">
+  <BrowserRouter>
+    <Landing>
+      <Nav />
+      <Header />
+    </Landing>
     <Switch>
-      <Layout>
-        <Route exact path="/" component={ HomePage } />
-      </Layout>
+      <Route exact path="/" component={Todo} />
     </Switch>
   </BrowserRouter>
 );

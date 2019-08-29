@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <h1>Create React App with MERN</h1>
+        <h1>Legends Promotions</h1>
       </header>
     );
   }
