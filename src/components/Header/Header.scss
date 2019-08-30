@@ -7,14 +7,16 @@ header {
   h1 {
     text-align: left;
     font-family: Impact, Charcoal, sans-serif;
-    font-size: 70px;
+    font-size: 7vw;
     color: white;
     margin:0;
   }
   h2{
     color: var(--light-1);
+    font-size: 2vw;
   }
   p {
-    color: rgba($color: white, $alpha: .5);
+    color: rgba($color: white, $alpha: .5);;
+    font-size: 1.2vw;
   }
 }

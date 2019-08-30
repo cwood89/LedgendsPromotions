@@ -7,10 +7,12 @@ header {
   header h1 {
     text-align: left;
     font-family: Impact, Charcoal, sans-serif;
-    font-size: 70px;
+    font-size: 7vw;
     color: white;
     margin: 0; }
   header h2 {
-    color: var(--light-1); }
+    color: var(--light-1);
+    font-size: 2vw; }
   header p {
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2vw; }

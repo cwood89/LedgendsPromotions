@@ -7,17 +7,20 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(helmet());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-const mongoURL = mongoose.connect('mongodb://localhost/legendsdb');
+// const autoIncrement = require('mongoose-auto-increment');
 
-const apiRoutes = require('./routes')(app, express);
+const connection = mongoose.connect('mongodb://localhost/legendsdb', { useNewUrlParser: true });
+
+// autoIncrement.initialize(connection);
+mongoose.connection.on("open", function () {
+  console.log("mongodb is connected!!");
+});
+
+require('./routes')(app);
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use('/api', apiRoutes);
-

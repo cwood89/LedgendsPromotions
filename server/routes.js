@@ -1,9 +1,15 @@
-const user = require('./user');
+var db = require("./models");
 
-module.exports = function(app, express) {
-  let apiRouter = express.Router();
-  apiRouter.use('/user', user);
+module.exports = function (app) {
 
-  return apiRouter;
+  app.get("/songs/:artist", function (req, res) {
+    db.Song.find({ artist: req.params.artist })
+      .then(function (dbSong) {
+        res.json(dbSong);
+      })
+      .catch(function (err) {
+        res.json(err);
+      });
+  });
 };
 

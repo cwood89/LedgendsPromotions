@@ -9,23 +9,23 @@ nav{
     padding: 0;
     overflow: hidden;
   }
- 
+  
   li {
     display: block;
-    transition: 0.3s;
     padding: 5px;
   }
   a {
+    transition: 0.4s;
     font-family: Georgia, serif;
     color: white;
     text-align: center;
     padding: 15px 15px;
     text-decoration: none;
     width: 50px;
+    font-size: 1.1vw;
   }
   li:hover{
-    border-radius: 7px;
-    background-color: rgba(255, 255, 255, 0.3);
-
+    border-bottom: solid 2px var(--dark-3);
+    letter-spacing: .7px;
   }
 }
