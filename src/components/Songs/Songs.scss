@@ -1,4 +1,4 @@
-.todo {
+.todo {  
   .input-actions {
     width: 100%;
     display: flex;
@@ -26,4 +26,8 @@
     font-size: 13px;
     outline: none;
   }
+}
+
+.section{
+  background-color: var(--dark-1);
 }

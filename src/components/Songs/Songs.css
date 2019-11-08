@@ -21,3 +21,6 @@
   cursor: pointer;
   font-size: 13px;
   outline: none; }
+
+.section {
+  background-color: var(--dark-1); }
