@@ -7,8 +7,9 @@ module.exports = function (app) {
     let search = req.params.search
     console.log(search)
     db.Song.find({ $text: { $search: search } })
-      .then(res => {
-        console.log(res)
+      .then(results => {
+        console.log(results)
+        res.send(results)
       })
   })
 }

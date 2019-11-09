@@ -26,6 +26,8 @@ const SongSchema = new Schema({
 SongSchema.index({
   name: 'text',
   artist: 'text'
+}, {
+  weights: { artist: 2, name: 1 }
 });
 
 const Song = mongoose.model('song', SongSchema, "songs");
