@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+import Results from '../Results'
 const API_URL = 'http://localhost:5000/api/search/'
 
 class Search extends Component {
@@ -12,10 +13,10 @@ class Search extends Component {
   getResults = () => {
     axios.get(`${API_URL}${this.state.query}`)
       .then(({ data }) => {
-        console.log(data)
-        // this.setState({
-        //   results: data.data 
-        // })
+
+        this.setState({
+          results: data
+        })
       })
   }
 
@@ -31,17 +32,25 @@ class Search extends Component {
     })
   }
 
+  searchSong = (e) => {
+    e.preventDefault();
+    // add functionality to search song or artist.
+  }
+
 
   render() {
     return (
-      <form>
-        <input
-          placeholder="Search for..."
-          ref={input => this.search = input}
-          onChange={this.handleInputChange}
-        />
-        <p>{this.state.query}</p>
-      </form>
+      <>
+        <form onSubmit={this.searchSong}>
+          <input
+            placeholder="Find a song..."
+            ref={input => this.search = input}
+            onChange={this.handleInputChange}
+          />
+          <button type='submit'>Search</button>
+        </form>
+        <Results data={this.state.results} />
+      </>
     )
   }
 }
