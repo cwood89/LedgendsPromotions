@@ -10,7 +10,7 @@ function Results(props) {
     )
   })
   return (
-    <div class='main'>
+    <div className='main'>
       {res}
     </div>
   )

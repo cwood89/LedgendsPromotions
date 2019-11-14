@@ -11,7 +11,17 @@ class Search extends Component {
   }
 
   getResults = () => {
-    axios.get(`${API_URL}${this.state.query}`)
+    let type;
+    if (this.type.value === "Artist") {
+      type = "artist/"
+    }
+    else if (this.type.value === "Song") {
+      type = "song/"
+    }
+    else if (this.type.value === "All") {
+      type = ""
+    }
+    axios.get(`${API_URL}${type}${this.state.query}`)
       .then(({ data }) => {
 
         this.setState({
@@ -32,22 +42,24 @@ class Search extends Component {
     })
   }
 
-  searchSong = (e) => {
-    e.preventDefault();
-    // add functionality to search song or artist.
-  }
-
 
   render() {
     return (
       <>
-        <form onSubmit={this.searchSong}>
+        <form onSubmit={(e) => e.preventDefault()}>
           <input
             placeholder="Find a song..."
             ref={input => this.search = input}
             onChange={this.handleInputChange}
           />
-          <button type='submit'>Search</button>
+          <select
+            id="type-val"
+            ref={input => this.type = input}>
+            <option>All</option>
+            <option>Song</option>
+            <option>Artist</option>
+          </select>
+          <button onClick={this.getResults} >Search</button>
         </form>
         <Results data={this.state.results} />
       </>
